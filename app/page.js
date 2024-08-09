@@ -178,7 +178,7 @@ export default function Home() {
                       }}
                   >
                     <i className="bi bi-pencil-square" style={{paddingRight: "10px"}}></i>
-                    Update
+                    ADD
                   </Button>
                 </Stack>
               </Box>
