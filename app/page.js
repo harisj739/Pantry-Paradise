@@ -1,13 +1,13 @@
-'use client'
+'use client';
 import Image from "next/image";
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import {firestore} from "@/firebase";
 import {Box, Button, Modal, Stack, TextField, Typography} from "@mui/material";
 import {doc, getDoc, setDoc, deleteDoc, getDocs, collection, query} from 'firebase/firestore';
 import "bootstrap-icons/font/bootstrap-icons.css";
-import SearchBar from 'search-bar-react';
+import dynamic from 'next/dynamic';
+const SearchBar = dynamic(() => import('search-bar-react'), { ssr: false });
 import Head from "next/head";
-import {Helmet} from "react-helmet";
 
 export default function Home() {
   const [inventory, setInventory] = useState([]);
